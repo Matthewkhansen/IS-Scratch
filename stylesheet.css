@@ -1,0 +1,25 @@
+.normal{
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+}
+
+img {
+    position: absolute;
+    right: 100px;
+    top: 175px;
+    width: 250px;       
+    height: auto;      
+    object-fit: contain;
+}
+
+.youtube {
+    position: relative;
+    left: 500px;
+
+}
+
+.footer {
+    position: relative;
+    left: 650px;
+    bottom: 10px;
+}

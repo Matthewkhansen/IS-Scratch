@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random number generator between 1 and 10</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #333;
+    }
+
+   
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Orbitron&family=Pacifico&family=Press+Start+2P&family=Roboto+Mono&display=swap');
+  </style>
+</head>
+<body>
+
+  <button onclick="generateNumber()">Generate Random Number</button>
+  <div id="result">Click the button to get a number!</div>
+
+  <script>
+    function generateNumber() {
+      const number = Math.floor(Math.random() * 10) + 1;
+      const result = document.getElementById('result');
+      result.textContent = `You got: ${number}`;
+
+     
+      const styles = {
+        1: { color: '#e74c3c', font: 'Indie Flower, cursive'},
+        2: { color: '#2ecc71', font: 'Orbitron, sans-serif' },
+        3: { color: '#3498db', font: 'Pacifico, cursive' },
+        4: { color: '#f1c40f', font: 'Roboto Mono, monospace' },
+        5: { color: '#9b59b6', font: 'Press Start 2P, cursive' },
+        6: { color: '#e67e22', font: 'Arial, sans-serif' },
+        7: { color: '#1abc9c', font: 'Verdana, sans-serif' },
+        8: { color: '#34495e', font: 'Courier New, monospace' },
+        9: { color: '#ff69b4', font: 'Georgia, serif' },
+        10: { color: '#2c3e50', font: 'Times New Roman, serif' }
+      };
+
+     
+      const style = styles[number];
+      result.style.color = style.color;
+      result.style.fontFamily = style.font;
+    }
+  </script>
+
+</body>
+</html>
